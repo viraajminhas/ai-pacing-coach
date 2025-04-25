@@ -1,0 +1,69 @@
+Project Plan
+
+# Project: AI-Powered Race Pacing & Strategy Coach
+
+This project helps runners optimize their race pacing strategy and identify training risks using simple machine learning models. Designed for high school and college athletes, this tool predicts personalized lap splits based on race history and PR data.
+
+## 🚀 Features (Coming Soon)
+- Predict lap splits for the mile based on PR
+- Post-race analysis using uploaded GPS/lap split data
+- Weekly training load monitor
+- Burnout and recovery alerts
+- Web dashboard with personalized visualizations
+
+---
+
+## 📁 Data Format (Sample CSV)
+| mile_pr | lap1 | lap2 | lap3 | lap4 |
+|---------|------|------|------|------|
+| 300     | 75   | 78   | 80   | 82   |
+| 290     | 73   | 74   | 76   | 77   |
+
+- `mile_pr`: Total mile personal record in seconds
+- `lap1-4`: Lap times (400m split) from previous races
+
+---
+
+## 🧱 Milestones
+| Month | Task |
+|-------|------|
+| Month 1 | Set up FastAPI + ML backend ✅ |
+| Month 2 | Build training load calculator + burnout logic |
+| Month 3 | Add file upload + post-race feedback engine |
+| Month 4 | Develop frontend with Streamlit or React |
+| Month 5 | Finalize model tuning, add Strava/Garmin support |
+| Month 6 | Publish on GitHub, write blog post, enter science fair |
+
+---
+
+## 🖼️ UI Mockups & Dashboard Concepts
+- **Home**: Input mile PR and race goal → get personalized lap plan
+- **Dashboard**:
+  - Weekly mileage graph
+  - PR tracker
+  - Burnout risk meter
+- **Upload Page**:
+  - Drop .CSV or connect Strava
+  - Get feedback like: "Lap 1 was 6% too fast"
+
+---
+
+## 📦 Tech Stack
+- **Backend**: FastAPI, Scikit-learn, Pandas
+- **Frontend** (up next): Streamlit or React
+- **Data storage**: Firebase or MongoDB (planned)
+
+---
+
+## 📌 To Run This Repo
+```bash
+uvicorn main:app --reload
+```
+POST example:
+```bash
+curl -X POST http://localhost:8000/predict -H "Content-Type: application/json" -d '{"mile_pr": 275}'
+```
+
+---
+
+Want to contribute or test features? Stay tuned for the upcoming GitHub repo release!
